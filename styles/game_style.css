@@ -70,7 +70,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 8vw; /* Espaço entre botões adaptável à largura da viewport */
-    padding-top: 31vh; /* Margem superior relativa à altura da viewport */
+    padding-top: 29vh; /* Margem superior relativa à altura da viewport */
 }
 
 .principal__fases__botoes__botao {
