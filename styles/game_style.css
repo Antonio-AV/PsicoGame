@@ -1,0 +1,154 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../assets/fundo_game.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10vh; /* Margem superior relativa à altura da viewport */
+}
+
+.cabecalho__inicio {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 8%;
+}
+
+.cabecalho__inicio__botao {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1%;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    border: 2px solid blueviolet;
+    background-color: #e8f409;
+    cursor: pointer;
+}
+
+.cabecalho__inicio__botao:hover {
+    background-color: #dbd539;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1; /* Ocupa o espaço vertical disponível */
+}
+
+.principal__fases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.principal__fases__botoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 8vw; /* Espaço entre botões adaptável à largura da viewport */
+    padding-top: 34.5vh; /* Margem superior relativa à altura da viewport */
+}
+
+.principal__fases__botoes__botao {
+    display: flex;
+    justify-content: center;
+    width: 3vw; /* Largura do botão adaptável à largura da viewport */
+    height: 1.5vw; /* Altura do botão adaptável à largura da viewport */
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 1%;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    border: 2px solid blueviolet;
+    background-color: #e8f409;
+    cursor: pointer;
+}
+
+.principal__fases__botoes__botao:hover {
+    background-color: #dbd539;
+}
+
+#videoContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90vw;
+    height: calc(90vw * 9 / 16); /* Mantém proporção 16:9 */
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+#videoPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh; /* Margem inferior adaptável à altura da viewport */
+    width: 100%;
+}
+
+.rodape__botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh; /* Espaço entre botões adaptável à altura da viewport */
+    width: 100%;
+    padding-left: 48%;
+}
+
+.rodape__botoes__botao {
+    display: flex;
+    justify-content: center;
+    width: 21%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1%;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    border: 2px solid blueviolet;
+    background-color: #e8f409;
+    cursor: pointer;
+}
+
+.rodape__botoes__botao:hover {
+    background-color: #dbd539;
+}

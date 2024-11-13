@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Updock&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    background-image: url('../assets/fundo_inicial.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Defina a largura que você deseja */
+    height: 100%; /* Defina a altura que você deseja */
+    flex-direction: column;
+    text-align: center;
+    padding-left: 30%;
+}
+
+
+.menu__itens{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
+}
+  
+
+.menu__itens__titulo__psico {
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    transform: translateX(-5%); /* Ajusta um pouco para a esquerda */
+}
+
+.menu__itens__titulo__games {
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    transform: translateX(12%); /* Ajusta um pouco para a direita */
+}
+
+.menu__itens__botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+.menu__itens__botoes__botao{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1%;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    border: 2px solid blueviolet;
+    background-color: #e8f409;
+}
+
+.menu__itens__botoes__botao:hover{
+    background-color: #dbd539;
+}

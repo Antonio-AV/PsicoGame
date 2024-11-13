@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PsicoGame</title>
+  <link rel="stylesheet" href="styles/game_style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <nav class="cabecalho__inicio">
+      <a class="cabecalho__inicio__botao" href="#" onclick="abrirVideo('../assets/intro.mp4')">
+        Iniciar Jogo
+      </a>
+    </nav>
+  </header>
+
+  <main class="principal">
+    <section class="principal__fases">
+        <nav class="principal__fases__botoes">
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 1.mp4')">1</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 2.mp4')">2</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 3.mp4')">3</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 4.mp4')">4</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 5.mp4')">5</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 6.mp4')">6</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 7.mp4')">7</a>
+          <a class="principal__fases__botoes__botao" href="#" onclick="abrirVideo('../assets/fase 8.mp4')">8</a>
+        </nav>
+        <div id="videoContainer">
+          <video id="videoPlayer" controls onended="fecharVideo()">
+            <source id="videoSource" src="" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+          <button onclick="fecharVideo()" style="position: absolute; top: 10px; right: 10px;">Fechar</button>
+        </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <nav class="rodape__botoes">
+      <a class="rodape__botoes__botao" href="#" onclick="abrirVideo('../assets/final.mp4')">
+        Finalizar Jogo
+      </a>
+      <a class="rodape__botoes__botao" href="index.html">
+        Voltar
+      </a>
+    </nav>
+  </footer>
+
+  <script>
+    function abrirVideo(videoFile) {
+      var videoContainer = document.getElementById('videoContainer');
+      var videoPlayer = document.getElementById('videoPlayer');
+      var videoSource = document.getElementById('videoSource');
+      
+      videoSource.src = videoFile;  // Define o caminho do vídeo
+      videoPlayer.load();  // Carrega o novo vídeo
+      videoContainer.style.display = 'block';  // Mostra o vídeo
+    }
+
+    function fecharVideo() {
+      var videoContainer = document.getElementById('videoContainer');
+      var videoPlayer = document.getElementById('videoPlayer');
+      
+      videoPlayer.pause();  // Pausa o vídeo caso esteja em execução
+      videoContainer.style.display = 'none';  // Esconde o contêiner do vídeo
+    }
+  </script>
+
+</body>
+</html>
